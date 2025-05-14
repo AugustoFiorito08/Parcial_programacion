@@ -4,8 +4,8 @@ class program
 {
     static void Main(string[] args)
     {
-        //Ejercicio2();
-        practica();
+        Ejercicio2();
+        
     }
     static void Ejercicio1()
     {
