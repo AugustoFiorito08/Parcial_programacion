@@ -62,22 +62,28 @@ class program
             lista_tiempo.Add(var);
             suma += var;
         }
-        double promedio = lista_tiempo.Average();
-        int mayor = 0;
-        int menor = 0;
-        for (int i = 0; i < lista_tiempo.Count; i++)
-        {
-            if (lista_tiempo[i] > promedio)
-            {
-                mayor++;
-            }
-            else
-            {
-                menor++;
-            }
-        }
-        Console.WriteLine($"Cantidad de dia con mayor que el promedio: {mayor}");
-        Console.WriteLine($"Cantidad de dia con menor que el promedio: {menor}");
-        Console.WriteLine($"El promedio de las temperaturas es de {promedio}%");
+        double total = 0;
+for (int i = 0; i < lista_tiempo.Count; i++)
+{
+    total += lista_tiempo[i];
+}
+double promedio2 = total / 7;
+
+int mayor = 0;
+int menor = 0;
+for (int i = 0; i < lista_tiempo.Count; i++)
+{
+    if (lista_tiempo[i] > promedio2)
+    {
+        mayor++;
+    }
+    else
+    {
+        menor++;
+    }
+}
+Console.WriteLine($"Cantidad de dia con mayor que el promedio: {mayor}");
+Console.WriteLine($"Cantidad de dia con menor que el promedio: {menor}");
+Console.WriteLine($"El promedio de las temperaturas es de {promedio2}%");
     }
 }
